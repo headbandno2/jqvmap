@@ -51,7 +51,10 @@
       borderWidth: 1,
       borderOpacity: 0.25,
       selectedRegions: null,
-      multiSelectRegion: false
+      multiSelectRegion: false,
+      transX: 0,
+      transY: 0,
+      scale: 1
     }, map = this.data('mapObject');
 
     if (options === 'addMap') {
@@ -377,6 +380,10 @@
 
     this.width = params.container.width();
     this.height = params.container.height();
+
+    this.transX = params.transX;
+    this.transY = params.transY;
+    this.scale = params.scale;
 
     this.resize();
 
